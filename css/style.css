@@ -1,0 +1,213 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+	/* font-style: #; */
+	text-decoration: none;
+	box-sizing: borderbox;
+	font-style: none;
+}
+
+a{
+	color: white;
+}
+
+/*****************/						/*no estoy familiarizado con las clases y las ID así que apenas les dí uso*/
+/*HEADER*/
+nav{
+	position:fixed;
+}
+
+
+nav img{								/* Banner*/
+	width: 100%;
+	width: 100vw;
+	height: 120px;
+	position: inherit;
+}
+
+.titulo{						
+	color:pink;						/* texto del banner*/
+	font-size: 40px;
+	margin-top: 30px;
+	position: relative;
+	text-align: center;
+	/* font:#; */
+}
+
+.navBotones{
+	width: 24vw;						/* si le pongo 25vw el boton de redes se va abajo culpa de los espacios*/
+	height: 50px;font-size: 30px;
+	padding-top: 7px;					/*padding para bajar el texto*/
+	margin-top: 44px;					/*para que quede abajo del banner*/
+	text-align: center;
+	display: inline-block;
+	background-color: #9F63A0;			/* no puedo quitar los espacios en blanco :c */
+	/* font: #;*/
+}
+
+/*HEADER
+*****************
+MAIN GLOBAL*/
+
+body{
+	background-image:url(../img/FONDO.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+main{
+	min-height: 200vh;
+	padding-top: 200px;					/*padding a todos los main para que queden debajo del nav*/
+}
+
+footer{
+	margin-top: auto;
+}
+
+.parrafo, .galeriaMain{
+	font-size: 50px;
+	margin: 50px 3% 0px 3%;
+	background-color: rgba(250, 250, 250, 0.3);
+}
+
+.boton{
+	text-align: center;
+	width: 500px;
+	font-size: 45px;
+	margin: 20px 0px;
+	border-radius: 7px;
+	display: inline-block;
+	background-color: #F095FF;
+}
+
+/*MAIN GLOBAL
+*****************
+MAIN INDEX*/
+
+.indexMain{
+	text-align: center;
+	font-size: 50px;
+}
+
+main section img{						/*foto en main */
+	width: 94%;
+	padding-top: 50px;
+	margin: 0px 3%;
+}
+
+
+/*MAIN INDEX
+*****************
+MAIN Y NAV TIENDA*/
+
+
+.navTienda{
+	width: 24vw;
+	font-size: 25px;
+	padding: 4px 0px;					/*padding para que quede más grande la caja*/
+	text-align: center;
+	display: inline-block;
+	background-color: #EA92EC;			/* no puedo quitar los espacios en blanco :c */
+	/* font: #;*/
+}
+
+.tiendaFoto{
+	width: 37%;
+	text-align: center;
+	display: inline-block;
+	margin-left: 8.5%;
+	margin-bottom: 8.5vw;
+}
+
+
+.pTienda{
+	font-size: 200%;
+	background-color: grey;
+	border-radius: 0px 0px 10px 10px;	/*intenté separar más las fotos del footer con un margin-buttom pero creaba una franja blanca en la zona del margin*/
+}
+
+
+
+/*MAIN Y NAV TIENDA
+*****************
+MAIN INFO*/
+
+/*la unica configuracion que necesité para esta pág fue la misma de los parrafos del index*/
+
+/* MAIN INFO*
+*****************
+MAIN GALERIA */
+
+.galeriaImg{
+	width: 47%;
+	margin: 1%;
+}
+
+/* MAIN GALERIA
+*****************
+MAIN REDES */
+
+.redesP{
+	color: white;
+	font-size: 45px;
+	border-radius: 7px;
+	padding-right: 20px;				/*para que la caja rosa quede mejor*/
+	margin-bottom: 20px;				/*no era la idea que los botones quedaran así pero me gustó*/
+	background-color: #F095FF;
+}
+
+.ico1, .ico2, .ico3, .ico4{
+	padding: 3px;
+	width: 130px;
+	background-color: rgba(250, 250, 250, 0.7);
+	border-radius: 10px;
+}
+
+.ico1{
+	color: blue; /*pensé que funcionaba, por eso una clase para c/u*/
+}
+
+.imgRedes{
+	width: 92vw;
+	margin: 50px 3% 10% 3%;
+}
+
+/*/MAIN REDES
+*****************
+FOOTER*/
+
+.footer{
+	background-color: darkgrey;
+	width: 100%;
+	display: flex;
+	columns: 1;
+	/* cosita para redondear esquinas */
+}
+
+.jimIMG{								/*foto de lombriz*/
+	border-radius: 90px;
+	height: 164px;
+	width: 164px;
+	margin: 10%;
+}
+
+.jimP{									/*nombre de la lombriz*/
+	background-color: grey;
+	border-radius: 3px;
+	margin-left: 20%;
+	text-align: center;
+}
+/* 
+.footerCentro{							pendiente arreglar (perdon)
+	padding-left: 25%;
+	display: flex;
+	width: 50px;
+}
+
+.footerDerecha{
+	width: 50px;
+	display: flex;
+} */
