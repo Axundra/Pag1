@@ -6,7 +6,7 @@
 	font-style: none;
 }
 
-@font-face {
+@font-face {						/*fuente del título*/
 	font-family: 'League Script';
 	font-style: normal;
 	font-display: swap;
@@ -14,9 +14,10 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,700&display=swap');
-
+/*fuente de los botones del nav
+*/
 a{
-	color: white;			/*la unica forma que encontre de darle color a los hipervinculos*/
+	color: white;/*			la unica forma que encontre de darle color a los hipervinculos*/
 }
 
 /*****************/
@@ -28,44 +29,44 @@ nav{
 nav img{								/* Banner*/
 	width: 100vw;
 	height: 20vw;
-	max-height: 100px;			/*max-height y heigt:30vw; para hacerlo responsive*/
-	object-fit: cover;			/*para ajustar la imagen*/
+	max-height: 100px;/*			max-height y heigt:30vw; para hacerlo responsive*/
+	object-fit: cover;/*			para ajustar la imagen*/
 	position: relative;
 }
 
 .titulo{								/*Título del banner*/
-	padding: 5px;				/*padding porque si no me corta el borde de las letras como la g,y,t*/
-	z-index: 1;					/*para que quede arriba de la imagen*/
+	padding: 5px;/*				padding porque si no me corta el borde de las letras como la g,y,t*/
+	z-index: 1;/*					para que quede arriba de la imagen*/
 	position: absolute;
 	font-family: 'League Script';
 	font-weight: bold;
 	color:#8c07a1;
 	font-size: 60px;
 	margin-top: 17px;
-	left: 0;					/*solucion que encontré en internet para centrarlo porque con position: absolute; no me deja centrar con normalidad...*/
+	left: 0;/*						solucion que encontré en internet para centrarlo porque con position: absolute; no me deja centrar con normalidad...*/
 	right: 0;
-	text-align: center;			/*...hasta acá*/
-	background: linear-gradient(#db01fe, white);	/*configuracion que saqué de internet para dar un borde con gradiente...*/
+	text-align: center;/*			...hasta acá*/
+	background: linear-gradient(#db01fe, white);/*	configuracion que saqué de internet para dar un borde con gradiente...*/
 	background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-stroke: 8px transparent;			  /*...hasta acá*/
+    -webkit-text-stroke: 8px transparent;/*			  ...hasta acá*/
 }
 
 .navBotones{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	height: 2.5vw; 			/*en vw para hacerlo un poco más responsive*/
+	height: 2.5vw;/* 			en vw para hacerlo un poco más responsive*/
 	border: #8c07a1;
 	background-color: #9F63A0;
 }
 
-.navTxt{					/*clase aparte para el texto y poder darle el borde*/
+.navTxt{/*					clase aparte para el texto y poder darle el borde*/
 	letter-spacing: 1.2vw;		
 	font-size: 1.7vw;
 	width: 4fr;
 	font-family: sans-serif;
-	font-weight: 1000;
+	font-weight: 1000;/*		para que quede más ancho*/
 	background:linear-gradient(#db01fe, #ed8efc);;
 	background-clip: text;
     -webkit-background-clip: text;
@@ -84,8 +85,8 @@ body{		/*fondo de pasto*/
 }
 
 main{
-	min-height: 200vh;
-	padding-top: 150px;					/*padding a todos los main para que queden debajo del nav*/
+	min-height: 100vh;
+	padding-top: 110px;/*					padding a todos los main para que queden debajo del nav*/
 }
 
 footer{
@@ -95,7 +96,7 @@ footer{
 .parrafo, .galeriaMain{
 	font-size: 50px;
 	margin: 50px 3% 0px 3%;
-	background-color: rgba(250, 250, 250, 0.3);	/*fondo transparente*/
+	background-color: rgba(250, 250, 250, 0.3);/*	fondo transparente del texto*/
 }
 
 .boton{
@@ -132,10 +133,10 @@ MAIN Y NAV TIENDA*/
 .navTienda{
 	width: 24vw;
 	font-size: 25px;
-	padding: 4px 0px;					/*padding para que quede más grande la caja*/
+	padding: 4px 0px;/*						 padding para que quede más grande la caja*/
 	text-align: center;
 	display: inline-block;
-	background-color: #EA92EC;			/* no puedo quitar los espacios en blanco :c */
+	background-color: #EA92EC;/*			no puedo quitar los espacios en blanco :c */
 	/* font: #;*/
 }
 
@@ -151,7 +152,7 @@ MAIN Y NAV TIENDA*/
 .pTienda{
 	font-size: 200%;
 	background-color: grey;
-	border-radius: 0px 0px 10px 10px;	/*intenté separar más las fotos del footer con un margin-buttom pero creaba una franja blanca en la zona del margin*/
+	border-radius: 0px 0px 10px 10px;/*	intenté separar más las fotos del footer con un margin-buttom pero creaba una franja blanca en la zona del margin*/
 }
 
 
@@ -179,8 +180,8 @@ MAIN REDES */
 	color: white;
 	font-size: 45px;
 	border-radius: 7px;
-	padding-right: 20px;				/*para que la caja rosa quede mejor*/
-	margin-bottom: 20px;				/*no era la idea que los botones quedaran así pero me gustó*/
+	padding-right: 20px;/*				para que la caja rosa quede mejor*/
+	margin-bottom: 20px;/*				no era la idea que los botones quedaran así pero me gustó*/
 	background-color: #F095FF;
 }
 
@@ -206,33 +207,40 @@ FOOTER*/
 
 .footer{
 	background-color: darkgrey;
-	width: 100%;
 	display: flex;
-	columns: 1;
-	/* cosita para redondear esquinas */
+	justify-content: space-between;
+	padding-bottom: 2vw;/*		padding para separarlo del fondo*/
 }
 
-.jimIMG{								/*foto de lombriz*/
-	border-radius: 90px;
-	height: 164px;
-	width: 164px;
+.footer a{
+	color:blue/*					color azul a los hipervinculos*/
+}
+
+.footer a, .footer p{
+	font-size: large;/*			texto más grande*/
+}
+
+.footer article{				/*para ordenar en filas el contenido de los articulos*/
+	display: flex;
+	flex-direction: column;
+}
+
+.jim img{								/*foto de lombriz*/
+	border-radius: 50%;
+	height: 164px;	width: 164px;
 	margin: 10%;
+	background-color: red;
 }
 
-.jimP{									/*nombre de la lombriz*/
+.jim p{									/*nombre de la lombriz	"Earthworm Jim	*/
 	background-color: grey;
 	border-radius: 3px;
 	margin-left: 20%;
+	margin-bottom: 30px;
 	text-align: center;
 }
-/* 
-.footerCentro{							pendiente arreglar (perdon)
-	padding-left: 25%;
-	display: flex;
-	width: 50px;
-}
 
-.footerDerecha{
-	width: 50px;
-	display: flex;
-} */
+.footerImg2{						/*foto a la derecha*/
+	height: 150px;
+	border-radius: 10px;
+}
