@@ -1,0 +1,281 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	font-style: none;
+}
+
+@font-face {
+	/*fuente del título*/
+	font-family: "League Script";
+	font-style: normal;
+	font-display: swap;
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/league-script@latest/latin-400-normal.woff2) format("woff2"),
+		url(https://cdn.jsdelivr.net/fontsource/fonts/league-script@latest/latin-400-normal.woff) format("woff");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,700&display=swap");
+
+/*fuente de los botones del nav
+*/
+a {
+	color: white;
+	/*			la unica forma que encontre de darle color a los hipervinculos*/
+}
+
+/*****************/
+/*HEADER*/
+nav {
+	position: fixed;
+}
+
+nav img {
+	/* Banner*/
+	width: 100vw;
+	height: 20vw;
+	max-height: 100px;
+	/*			max-height y heigt:30vw; para hacerlo responsive*/
+	object-fit: cover;
+	/*			para ajustar la imagen*/
+	position: relative;
+}
+
+.titulo {
+	/*Título del banner*/
+	padding: 5px;
+	/*				padding porque si no me corta el borde de las letras como la g,y,t*/
+	z-index: 1;
+	/*					para que quede arriba de la imagen*/
+	position: absolute;
+	font-family: "League Script";
+	font-weight: bold;
+	color: #8c07a1;
+	font-size: 60px;
+	margin-top: 17px;
+	left: 0;
+	/*						solucion que encontré en internet para centrarlo porque con position: absolute; no me deja centrar con normalidad...*/
+	right: 0;
+	text-align: center;
+	/*			...hasta acá*/
+	background: linear-gradient(#db01fe,
+			white);
+	/*	configuracion que saqué de internet para dar un borde con gradiente...*/
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 8px transparent;
+	/*			  ...hasta acá*/
+}
+
+.navBotones {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 2.5vw;
+	/* 			en vw para hacerlo un poco más responsive*/
+	border: #8c07a1;
+	background-color: #9f63a0;
+}
+
+.navTxt {
+	/*					clase aparte para el texto y poder darle el borde*/
+	letter-spacing: 1.2vw;
+	font-size: 1.7vw;
+	width: 4fr;
+	font-family: sans-serif;
+	font-weight: 1000;
+	/*		para que quede más ancho*/
+	background: linear-gradient(#db01fe, #ed8efc);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 4px transparent;
+}
+
+/*HEADER
+*****************
+MAIN GLOBAL*/
+
+body {
+	/*fondo de pasto*/
+	background-image: url(../img/FONDO.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+main {
+	min-height: 100vh;
+	padding-top: 110px;
+	/*					padding a todos los main para que queden debajo del nav*/
+}
+
+footer {
+	margin-top: auto;
+}
+
+.parrafo,
+.galeriaMain {
+	font-size: 50px;
+	margin: 50px 3% 0px 3%;
+	background-color: rgba(250, 250, 250, 0.3);
+	/*	fondo transparente del texto*/
+}
+
+.boton {
+	text-align: center;
+	width: 500px;
+	font-size: 45px;
+	margin: 20px 0px;
+	border-radius: 7px;
+	display: inline-block;
+	background-color: #f095ff;
+}
+
+/*MAIN GLOBAL
+*****************
+MAIN INDEX*/
+
+.indexMain {
+	text-align: center;
+	font-size: 50px;
+}
+
+main section img {
+	/*foto en main */
+	width: 94%;
+	padding-top: 50px;
+	margin: 0px 3%;
+}
+
+/*MAIN INDEX
+*****************
+MAIN Y NAV TIENDA*/
+
+.navTienda {
+	width: 24vw;
+	font-size: 25px;
+	padding: 4px 0px;
+	/*						 padding para que quede más grande la caja*/
+	text-align: center;
+	display: inline-block;
+	background-color: #ea92ec;
+	/*			no puedo quitar los espacios en blanco :c */
+	/* font: #;*/
+}
+
+.tiendaFoto {
+	width: 37%;
+	text-align: center;
+	display: inline-block;
+	margin-left: 8.5%;
+	margin-bottom: 8.5vw;
+}
+
+.pTienda {
+	font-size: 200%;
+	background-color: grey;
+	border-radius: 0px 0px 10px 10px;
+	/*	intenté separar más las fotos del footer con un margin-buttom pero creaba una franja blanca en la zona del margin*/
+}
+
+/*MAIN Y NAV TIENDA
+*****************
+MAIN INFO*/
+
+/*la unica configuracion que necesité para esta pág fue la misma de los parrafos del index*/
+
+/* MAIN INFO*
+*****************
+MAIN GALERIA */
+
+.galeriaImg {
+	width: 47%;
+	margin: 1%;
+}
+
+/* MAIN GALERIA
+*****************
+MAIN REDES */
+
+.redesP {
+	color: white;
+	font-size: 45px;
+	border-radius: 7px;
+	padding-right: 20px;
+	/*				para que la caja rosa quede mejor*/
+	margin-bottom: 20px;
+	/*				no era la idea que los botones quedaran así pero me gustó*/
+	background-color: #f095ff;
+}
+
+.ico1,
+.ico2,
+.ico3,
+.ico4 {
+	padding: 3px;
+	width: 130px;
+	background-color: rgba(250, 250, 250, 0.7);
+	border-radius: 10px;
+}
+
+.ico1 {
+	color: blue;
+	/*pensé que funcionaba, por eso una clase para c/u*/
+}
+
+.imgRedes {
+	width: 92vw;
+	margin: 50px 3% 10% 3%;
+}
+
+/*/MAIN REDES
+*****************
+FOOTER*/
+
+.footer {
+	background-color: darkgrey;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 2vw;
+	/*		padding para separarlo del fondo*/
+}
+
+.footer a {
+	color: blue;
+	/*					color azul a los hipervinculos*/
+}
+
+.footer a,
+.footer p {
+	font-size: large;
+	/*			texto más grande*/
+}
+
+.footer article {
+	/*para ordenar en filas el contenido de los articulos*/
+	display: flex;
+	flex-direction: column;
+}
+
+.jim img {
+	/*foto de lombriz*/
+	border-radius: 50%;
+	height: 164px;
+	width: 164px;
+	margin: 10%;
+	background-color: red;
+}
+
+.jim p {
+	/*nombre de la lombriz	"Earthworm Jim	*/
+	background-color: grey;
+	border-radius: 3px;
+	margin-left: 20%;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.footerImg2 {
+	/*foto a la derecha*/
+	height: 150px;
+	border-radius: 10px;
+}
