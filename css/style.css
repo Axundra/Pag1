@@ -7,6 +7,10 @@
   font-style: none;
 }
 
+a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
 @font-face { /*fuente del título*/
   font-family: "League Script";
   font-style: normal;
@@ -16,6 +20,7 @@
 /*fuente de los botones del nav*/
 a {
   color: white; /*				la unica forma que encontre de darle color a los hipervinculos*/
+  font-style: none;
 }
 
 /*************************************************************************************************
@@ -24,10 +29,7 @@ HEADER
 nav {
   position: fixed;
 }
-nav section {
-  margin: 0px 1px;
-}
-nav img { /* Banner*/
+nav img { /*Banner*/
   width: 100vw;
   height: 7.5vw;
   max-height: 120px; /*			max-height y heigt:30vw; para hacerlo responsive*/
@@ -35,7 +37,7 @@ nav img { /* Banner*/
   position: relative;
 }
 nav .titulo { /*Título del banner*/
-  padding: 5px 0px; /*				padding porque si no me corta el borde/gradiente de las letras como la g,y,t*/
+  padding: 3.5px; /*				padding porque si no me corta el borde/gradiente de las letras como la g,y,t*/
   z-index: 1; /*					para que quede arriba de la imagen*/
   margin-top: 0.5%;
   position: absolute;
@@ -85,13 +87,12 @@ nav .navTienda {
   border: 1px solid black;
   border-left: 0px;
   border-top: 0px;
-  /*no puedo quitar los espacios en blanco :c */
 }
 
 /*
-HEADER
+HEADER													HEADER
 *************************************************************************************************
-<MAIN> GLOBAL
+<MAIN> GLOBAL											GLOBAL
 */
 body {
   /*fondo de pasto*/
@@ -99,11 +100,12 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  text-align: center;
 }
 
 main {
   min-height: 100vh;
-  padding-top: 10vw; /*	padding a todos los main para que queden debajo del nav*/
+  padding-top: 13vw; /*padding a todos los main para que queden debajo del nav*/
 }
 
 footer {
@@ -111,43 +113,38 @@ footer {
 }
 
 .parrafo, .galeriaMain {
-  font-size: 50px;
-  margin: 3% 3% 0px 3%;
+  font-size: 3.8vw;
+  padding: 1% 10%;
   background-color: rgba(250, 250, 250, 0.3);
   /*fondo transparente del texto*/
 }
 
 .boton {
   text-align: center;
-  width: 70vw;
+  width: 50vw;
   font-size: 3.2vw;
-  margin: 20px 0px;
+  margin: 4vw 0px;
   border-radius: 7px;
   display: inline-block;
   background-color: #f095ff;
 }
 
 /*
-<MAIN> GLOBAL
+<MAIN> GLOBAL											GLOBAL
 *************************************************************************************************
-<MAIN> INDEX
+<MAIN> INDEX											INDEX
 */
-.indexMain {
-  text-align: center;
-  font-size: 50px;
-}
-
 .fotoIndex {
-  /*foto en main */
-  width: 94%;
-  padding-top: 50px;
-  margin: 0px 3%;
+  width: 60vw;
+  margin: 4vw;
+  border-radius: 20px;
+  border: 2px outset #db01fe;
 }
 
 /*
-<MAIN> INDEX
+<MAIN> INDEX											INDEX
 *************************************************************************************************
-<MAIN> TIENDA
+<MAIN> TIENDA											TIENDA
 */
 .tiendaMain {
   padding-top: calc(5vw + 120px);
@@ -169,43 +166,43 @@ footer {
 }
 
 /*
-<MAIN> TIENDA
+<MAIN> TIENDA											TIENDA
 *************************************************************************************************
-<MAIN> INFO
+<MAIN> INFO												INFO
 */
 /*la configuracion que necesité para esta página fue la misma de los parrafos del index*/
 /*
-<MAIN> INFO
+<MAIN> INFO												INFO
 *************************************************************************************************
-<MAIN> GALERIA
+<MAIN> GALERIA											GALERIA
 */
 .galeriaMain { /*responsive por defecto*/
   display: flex;
   justify-content: space-around;
   flex-flow: wrap;
+  margin: 0px 10%;
+  padding: 0px;
 }
 .galeriaMain .galeriaImg {
-  width: 44vw;
-  margin: 1vw 1vw 1vw 1vw;
+  width: 35vw;
+  margin: 1vw;
 }
 
 /*
-<MAIN> GALERIA
+<MAIN> GALERIA											GALERIA
 *************************************************************************************************
-<MAIN> REDES
+<MAIN> REDES											REDES
 */
 .redesP {
-  color: white;
   font-size: 45px;
   border-radius: 7px;
-  padding-right: 20px;
-  /*para que la caja rosa quede mejor*/
-  margin-bottom: 20px;
-  /*no era la idea que los botones quedaran así pero me gustó*/
+  padding-right: 20px; /*para que la caja rosa quede mejor*/
+  margin-bottom: 20px; /*no era la idea que los botones quedaran así pero me gustó*/
   background-color: #f095ff;
 }
 
-.ico1, .ico2, .ico3, .ico4 {
+.ico {
+  margin-top: 4vw;
   padding: 3px;
   width: 130px;
   background-color: rgba(250, 250, 250, 0.7);
@@ -213,14 +210,16 @@ footer {
 }
 
 .imgRedes {
-  width: 92vw;
-  margin: 50px 3% 10% 3%;
+  width: 85vw;
+  margin: 5vw 3%;
+  border-radius: 20px;
+  border: 3px outset #db01fe;
 }
 
 /*
-<MAIN> REDES
+<MAIN> REDES											REDES
 *************************************************************************************************
-FOOTER
+FOOTER													FOOTER
 */
 .footer {
   background-color: darkgrey;
@@ -240,6 +239,7 @@ FOOTER
 .footer a, .footer p {
   font-size: 1.5vw;
   color: rgb(70, 70, 70);
+  text-align: start;
 }
 .footer a {
   color: rgb(43, 43, 255); /*color azul a los hipervinculos*/
@@ -253,6 +253,7 @@ FOOTER
   width: 10vw;
   margin: 10%;
   margin-top: 0px;
+  border: 2px outset #db01fe;
 }
 .footer .jim p { /*nombre de la lombriz	"Earthworm Jim	*/
   background-color: rgb(146, 146, 146);
@@ -273,6 +274,86 @@ FOOTER
   align-self: center;
   text-align: center;
   width: 4vw;
+}
+
+@media (max-width: 768px) {
+  * {
+    background-color: yellowgreen;
+  }
+  .footer {
+    border-radius: 20px 20px 0px 0px;
+  }
+  .footer article {
+    border-left: 2px solid rgb(100, 100, 100);
+    border-radius: 15px;
+  }
+  .redesP {
+    font-size: 37px;
+    border-radius: 5px;
+  }
+  .ico {
+    padding: 5px;
+    width: 110px;
+    border-radius: 9px;
+  }
+  .imgRedes {
+    border-radius: 15px;
+  }
+}
+@media (max-width: 480px) {
+  * {
+    background-color: blueviolet;
+  }
+  .footer {
+    border-radius: 20px 20px 0px 0px;
+  }
+  .footer article {
+    border-left: 1px solid rgb(100, 100, 100);
+  }
+  .galeriaMain .galeriaImg {
+    width: 72vw;
+    margin: 2vw;
+  }
+  .redesP {
+    font-size: 30px;
+    border-radius: 4px;
+  }
+  .ico {
+    padding: 4px;
+    width: 90px;
+    border-radius: 8px;
+  }
+  .imgRedes {
+    border-radius: 10px;
+    border: 2px outset #db01fe;
+  }
+}
+@media (max-width: 320px) {
+  * {
+    background-color: red;
+  }
+  .footer {
+    border-radius: 15px 15px 0px 0px;
+  }
+  .footer .jim .imgFooter {
+    border: 1px outset #db01fe;
+  }
+  .footer article {
+    border-left: 1px solid rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+  .redesP {
+    font-size: 20px;
+    border-radius: 3px;
+  }
+  .ico {
+    padding: 3px;
+    width: 70px;
+    border-radius: 5px;
+  }
+  .imgRedes {
+    border: 1px outset #db01fe;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
