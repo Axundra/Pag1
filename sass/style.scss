@@ -5,6 +5,7 @@
 	font-style: none;
 }
 
+
 a:link, a:visited, a:active {
     text-decoration:none;
 }
@@ -31,6 +32,7 @@ a {
 HEADER
 */
 nav {
+	z-index: 3;
 	position: fixed;
 	
 	img {/*Banner*/
@@ -41,7 +43,7 @@ nav {
 
 	.titulo {/*Título del banner*/
 		padding: 3.5px;/*				padding porque si no me corta el borde/gradiente de las letras como la g,y,t*/
-		z-index: 1;/*					para que quede arriba de la imagen*/
+		z-index: 4;/*					para que quede arriba de la imagen*/
 		margin-top: .5%;
 		position: absolute;
 		font-family: "League Script";
@@ -57,7 +59,6 @@ nav {
 	}
 
 	.navBotones {//		pendiente para solucionar el responsivo
-		margin-top: -4px;// 		por alguna razon quedaba un hueco artificial entre los botones y el banner
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -82,9 +83,10 @@ nav {
 	}
 
 	.navTienda {//segunda botonera del nav en la tienda
+		height: 200px ;
 		width: calc(25vw - 4px);//		para que cada boton tenga un cuarto del ancho de la pantalla menos los px del borde agregado :|
 		padding: .2vw;/*				para centrarlo*/
-		background: white;
+		background: black;
 		color: #db01fe;
 		display: inline-block;//		con flex queda raro
 		border-radius: 0px 0px 5px 5px;//		borde redondeado solo abajo
@@ -154,7 +156,7 @@ footer {
 *************************************************************************************************
 <MAIN> TIENDA											TIENDA
 */
-.tiendaMain{padding-top: calc(5vw + 120px);} //		para que quede mas abajo por el nuevo nav
+// .tiendaMain{padding-top: calc(5vw + 120px);} //		para que quede mas abajo por el nuevo nav
 
 .tiendaFoto {
 	width: 37%;
@@ -203,6 +205,11 @@ footer {
 *************************************************************************************************
 <MAIN> REDES											REDES
 */
+.mainRedes{
+	text-align: start;
+	display: flex;
+	flex-direction: column;
+}
 
 .redesP {
 	font-size: 45px;
@@ -213,6 +220,7 @@ footer {
 }
 
 .ico {
+	justify-self: flex-end;
 	margin-top: 4vw;
 	padding: 3px;
 	width: 130px;
@@ -299,16 +307,13 @@ FOOTER													FOOTER
 
 
 
-//##########################################################################
-//##########################################################################
-//								RESPONSIVE
-//##########################################################################
-//##########################################################################
+//##########################################################################//
+//##########################################################################//
+//								RESPONSIVE									//
+//##########################################################################//
+//##########################################################################//
 
 @media (max-width: 768px){
-	*{
-		background-color: yellowgreen; 
-	}
 	.footer{
 		border-radius: 20px 20px 0px 0px;
 		article{
@@ -334,9 +339,6 @@ FOOTER													FOOTER
 
 
 @media (max-width: 480px){
-	*{
-		background-color: blueviolet; 
-	}
 	.footer{
 		border-radius: 20px 20px 0px 0px;
 		article{
@@ -367,10 +369,6 @@ FOOTER													FOOTER
 
 
 @media (max-width: 320px){
-	*{
-		background-color: red;
-	}
-
 	.footer{
 		border-radius: 15px 15px 0px 0px; 
 		.jim{
