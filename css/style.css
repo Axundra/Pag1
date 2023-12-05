@@ -7,8 +7,9 @@
   font-style: none;
 }
 
-a:link, a:visited, a:active {
+a:link, a:visited, a:active, a:hover {
   text-decoration: none;
+  transition: 1s;
 }
 
 @font-face { /*fuente del título*/
@@ -27,20 +28,21 @@ a {
 HEADER
 */
 nav {
-  z-index: 3;
   position: fixed;
+}
+nav .navBotones, nav .navBotTienda {
+  background: linear-gradient(rgba(221, 0, 255, 0.705) 10%, transparent);
 }
 nav img { /*Banner*/
   width: 100vw;
   height: 7.5vw;
-  max-height: 120px; /*			max-height y heigt:30vw; para hacerlo responsive*/
+  max-height: 210px; /*			max-height y heigt:30vw; para hacerlo responsive*/
   object-fit: cover; /*			para ajustar la imagen*/
   position: relative;
 }
 nav .titulo { /*Título del banner*/
-  padding: 3.5px; /*				padding porque si no me corta el borde/gradiente de las letras como la g,y,t*/
-  z-index: 4; /*					para que quede arriba de la imagen*/
-  margin-top: 0.5%;
+  padding: 3.5px; /*				padding porque si no me corta el borde-gradiente de las letras como la g,y,t*/
+  z-index: 2;
   position: absolute;
   font-family: "League Script";
   font-weight: 600;
@@ -49,45 +51,47 @@ nav .titulo { /*Título del banner*/
   left: 0;
   right: 0; /*			solucion que encontré en internet para centrarlo porque con position: absolute; no me deja centrar con normalidad...*/
   text-align: center; /*			...hasta acá*/
-  background: linear-gradient(#db01fe, white); /*		configuracion que saqué de internet para dar un borde con gradiente...*/
+  background: linear-gradient(#db01fe, white); /*		  configuracion que saqué de internet para dar un borde con gradiente...*/
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 0.5vw transparent; /*				  ...hasta acá*/
+  -webkit-text-stroke: 0.5vw transparent; /*				...hasta acá*/
 }
 nav .navBotones {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 2.5vw; /*			en vw para hacerlo un poco más responsive*/
-  border: #8c07a1;
-  background-color: #9f63a0;
-  margin-left: -1vw;
 }
 nav .navTxt, nav .navTienda { /*clase aparte para el texto y poder darle el borde*/
   padding: 0px 1%; /*			para que no se corte el borde/gradiente*/
   letter-spacing: 1.2vw;
   font-size: 1.7vw;
   font-family: sans-serif;
+  display: inline-block;
   font-weight: 1000; /*		para que quede más ancho*/
-  background: linear-gradient(#db01fe, #ed8efc);
+  background: linear-gradient(#d903fa, #eeb0f8);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 4px transparent;
+  -webkit-text-stroke: 0.5vw transparent;
   width: 25vw;
   text-align: center;
+  border-left: 2px solid #d903fa;
 }
 nav .navTienda {
-  height: 200px;
-  width: calc(25vw - 4px);
+  width: 33.33vw;
   padding: 0.2vw; /*				para centrarlo*/
-  background: black;
-  color: #db01fe;
-  display: inline-block;
-  border-radius: 0px 0px 5px 5px;
-  margin: 0px -4px;
-  border: 1px solid black;
-  border-left: 0px;
-  border-top: 0px;
+  margin: 0px -3px;
+}
+nav a:hover {
+  color: #8c07a1;
+  background: linear-gradient(#eeb0f8, #d903fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.5vw transparent;
+  font-size: 2vw;
+}
+nav .titulo:hover {
+  font-size: 4.8vw;
 }
 
 /*
@@ -147,19 +151,21 @@ footer {
 *************************************************************************************************
 <MAIN> TIENDA											TIENDA
 */
-.tiendaFoto {
-  width: 37%;
-  text-align: center;
-  display: inline-block;
-  margin-left: 8.5%;
-  margin-bottom: 8.5vw;
+.tiendaMain {
+  padding-top: 15vw;
+  display: grid;
+  grid-template-columns: 30vw, 30vw;
+  grid-template-rows: 20vw, 20vw;
+  grid-template-areas: "a1" "a2" "b1" "b2";
 }
-
-.pTienda {
+.tiendaMain .tiendaFoto img {
+  width: 20vw;
+}
+.tiendaMain .tiendaFoto .nombresTienda {
+  width: 20vw;
   font-size: 200%;
   background-color: grey;
   border-radius: 0px 0px 10px 10px;
-  /*intenté separar más las fotos del footer con un margin-buttom pero creaba una franja blanca en la zona del margin*/
 }
 
 /*
@@ -229,7 +235,6 @@ FOOTER													FOOTER
   background-color: darkgrey;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2vw;
   border-radius: 30px 30px 0px 0px;
 }
 .footer article { /*para ordenar en filas el contenido de los articulos*/
