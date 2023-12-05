@@ -170,8 +170,8 @@ footer {
 	grid-template-columns: 30vw, 30vw;
 	grid-template-rows: 20vw, 20vw;
 	grid-template-areas: 
-	"a1" "a2"
-	"b1" "b2";
+						"a1" "a2"
+						"b1" "b2";
 	.tiendaFoto {
 		img{
 			width: 20vw;
@@ -183,6 +183,9 @@ footer {
 			background-color: grey;
 			border-radius: 0px 0px 10px 10px;
 		}
+	}
+	.tienda1{
+		grid-area: "a1";
 	}
 } 
 

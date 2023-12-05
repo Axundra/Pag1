@@ -167,6 +167,9 @@ footer {
   background-color: grey;
   border-radius: 0px 0px 10px 10px;
 }
+.tiendaMain .tienda1 {
+  grid-area: "a1";
+}
 
 /*
 <MAIN> TIENDA											TIENDA
