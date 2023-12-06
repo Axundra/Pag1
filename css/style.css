@@ -305,6 +305,10 @@ FOOTER													FOOTER
   text-align: center;
   width: 10vw;
 }
+.footer .jim .basicamente {
+  width: 15vw;
+  border-radius: 10px;
+}
 .footer .footerImg2 { /*foto a la derecha*/
   height: 15vw;
   border-radius: 10px;
@@ -315,6 +319,11 @@ FOOTER													FOOTER
   align-self: center;
   text-align: center;
   width: 4vw;
+}
+.footer .yo {
+  width: 5vw;
+  align-self: center;
+  border-radius: 100%;
 }
 
 @media (max-width: 768px) {
