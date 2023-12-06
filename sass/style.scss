@@ -129,7 +129,7 @@ footer {
 	margin-top: auto;
 }
 
-.parrafo, .galeriaMain {
+.parrafo {
 	font-size: 3.8vw;
 	padding: 1% 10%;
 	background-color: rgba(250, 250, 250, 0.3);
@@ -165,27 +165,59 @@ footer {
 <MAIN> TIENDA											TIENDA
 */
 .tiendaMain {
-	padding-top: 15vw;//		para que quede mas abajo por el nuevo nav
+	padding-top: 2vw;//		para que quede mas abajo por el nuevo nav
 	display: grid;
-	grid-template-columns: 30vw, 30vw;
-	grid-template-rows: 20vw, 20vw;
-	grid-template-areas: 
-						"a1" "a2"
-						"b1" "b2";
-	.tiendaFoto {
-		img{
-			width: 20vw;
-		}
+	grid-template-columns: 40vw 40vw;
+	grid-template-rows: auto, auto;
+	justify-content: center;
+	row-gap: 10vw;
 
+	.tiendaFoto {
+		justify-self: center;
+		img{
+			width: 25vw;		height: 40vw;
+			border-radius: 10px 10px 0px 0px;// 	borde a las esquinas superiores
+		}
 		.nombresTienda {
-			width: 20vw;
-			font-size: 200%;
+			width: 25vw;
+			font-size: 3vw; 
 			background-color: grey;
-			border-radius: 0px 0px 10px 10px;
+			border-radius: 0px 0px 10px 10px;// 	borde a las esquinas inferiores
 		}
 	}
 	.tienda1{
-		grid-area: "a1";
+		grid-column: 1;//		no pude con el método del profe :/
+	}
+	.tienda2{
+		grid-column: 2;
+	}
+	.tienda3{
+		grid-column: 1;
+		grid-row: 2; 
+	}
+
+	.tienda4{
+		grid-column: 2;
+		grid-row: 2;
+		z-index: -1;
+		img{
+			height: 44.7vw;// 		para que tenga la misma altura que el del lado junto con el texto
+			object-fit: cover;
+			filter: grayscale(100%) brightness(50%);//		si le doy blur(Xpx) se pone borroso el borde >:c
+			position: absolute;
+			right: 16.75vw;//		culpa del position: absolute; no se centra solo
+			border-radius: 10px;
+			border: 3px solid black;
+		}
+		.nombresTienda{
+			width: 30vw;
+			position: relative;
+			transform: rotate(45deg);
+			top: 22vw;//			para dejarlo más al medio
+			border-radius: 20px;
+			background-color: rgba(14, 14, 14, 0.7);
+			border: 3px solid black;
+		}
 	}
 } 
 
@@ -205,18 +237,9 @@ footer {
 <MAIN> GALERIA											GALERIA
 */
 
-.galeriaMain{		/*responsive por defecto*/
-	display: flex;
-	justify-content: space-around;
-	flex-flow: wrap;
-	margin: 0px 10%;//para cancelar la configuracion del fondo gris...
-	padding: 0px;//...
-	.galeriaImg {
-		width: 35vw; 
-		margin: 1vw;
-	}
+.galeriaMain{
+	z-index: -1;
 }
-
 
 /*
 <MAIN> GALERIA											GALERIA
@@ -264,6 +287,7 @@ FOOTER													FOOTER
 	display: flex;
 	justify-content: space-between;
 	border-radius: 30px 30px 0px 0px;
+	margin-top: 10vw;
 
 	article {/*para ordenar en filas el contenido de los articulos*/
 		display: flex;
