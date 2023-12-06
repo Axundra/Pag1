@@ -34,6 +34,7 @@ HEADER
 */
 nav {
 	position: fixed;
+	z-index: 2;//			porque algunos elementos lo superponían
 
 	.navBotones, .navBotTienda{
 		background: linear-gradient(rgba(221, 0, 255, 0.705) 10%, transparent);// 10% para que destaque más el color
@@ -47,7 +48,7 @@ nav {
 
 	.titulo {/*Título del banner*/
 		padding: 3.5px;/*				padding porque si no me corta el borde-gradiente de las letras como la g,y,t*/
-		z-index: 2;
+		z-index: 3;
 		position: absolute;
 		font-family: "League Script";
 		font-weight: 600;//				para que quede grueso
@@ -199,7 +200,7 @@ footer {
 	.tienda4{
 		grid-column: 2;
 		grid-row: 2;
-		z-index: -1;
+		z-index: 0;
 		img{
 			height: 44.7vw;// 		para que tenga la misma altura que el del lado junto con el texto
 			object-fit: cover;
@@ -238,7 +239,11 @@ footer {
 */
 
 .galeriaMain{
-	z-index: -1;
+	z-index: 1;
+	img{
+		border-radius: 20px;
+		border: 3px outset #db01fe;
+	}
 }
 
 /*
