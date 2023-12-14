@@ -20,7 +20,7 @@ a:link, a:visited, a:active, a:hover {
 }
 /*fuente de los botones del nav*/
 a {
-  color: white; /*				la unica forma que encontre de darle color a los hipervinculos*/
+  color: white; /*		la unica forma que encontre de darle color a los hipervinculos*/
   font-style: none;
 }
 
@@ -32,7 +32,8 @@ nav {
   z-index: 2;
 }
 nav .navBotones, nav .navBotTienda {
-  background: linear-gradient(rgba(221, 0, 255, 0.705) 10%, transparent);
+  background: linear-gradient(rgba(221, 0, 255, 0.705) 80%, transparent);
+  height: 5vw;
 }
 nav img { /*Banner*/
   width: 100vw;
@@ -61,7 +62,7 @@ nav .navBotones {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 2.5vw; /*			en vw para hacerlo un poco más responsive*/
+  height: 3vw; /*			en vw para hacerlo un poco más responsive*/
 }
 nav .navTxt, nav .navTienda { /*clase aparte para el texto y poder darle el borde*/
   padding: 0px 1%; /*			para que no se corte el borde/gradiente*/
@@ -77,6 +78,8 @@ nav .navTxt, nav .navTienda { /*clase aparte para el texto y poder darle el bord
   width: 25vw;
   text-align: center;
   border-left: 2px solid #d903fa;
+  border-right: 2px solid #d903fa;
+  border-radius: 5px;
 }
 nav .navTienda {
   width: 33.33vw;
@@ -152,13 +155,16 @@ footer {
 *************************************************************************************************
 <MAIN> TIENDA											TIENDA
 */
+nav .navTiendaSuperior {
+  background: rgba(221, 0, 255, 0.705);
+}
+
 .tiendaMain {
-  padding-top: 2vw;
+  padding-top: 4vw;
   display: grid;
   grid-template-columns: 40vw 40vw;
   grid-template-rows: auto, auto;
   justify-content: center;
-  row-gap: 10vw;
 }
 .tiendaMain .tiendaFoto {
   justify-self: center;
@@ -184,28 +190,24 @@ footer {
   grid-column: 1;
   grid-row: 2;
 }
-.tiendaMain .tienda4 {
-  grid-column: 2;
-  grid-row: 2;
-  z-index: 0;
-}
 .tiendaMain .tienda4 img {
-  height: 44.7vw;
+  height: 44.5vw;
   object-fit: cover;
   filter: grayscale(100%) brightness(50%);
-  position: absolute;
-  right: 16.75vw;
   border-radius: 10px;
   border: 3px solid black;
+  grid-column: 2;
+  grid-row: 2;
 }
 .tiendaMain .tienda4 .nombresTienda {
-  width: 30vw;
-  position: relative;
+  bottom: 23vw;
   transform: rotate(45deg);
-  top: 22vw;
+  position: relative;
   border-radius: 20px;
   background-color: rgba(14, 14, 14, 0.7);
   border: 3px solid black;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 /*
@@ -225,6 +227,10 @@ footer {
 .galeriaMain img {
   border-radius: 20px;
   border: 3px outset #db01fe;
+}
+
+.carousel {
+  margin-bottom: 10vw;
 }
 
 /*
@@ -272,7 +278,8 @@ FOOTER													FOOTER
   display: flex;
   justify-content: space-between;
   border-radius: 30px 30px 0px 0px;
-  margin-top: 10vw;
+  margin-top: 5vw;
+  border-top: 2px solid black;
 }
 .footer article { /*para ordenar en filas el contenido de los articulos*/
   display: flex;
@@ -284,61 +291,71 @@ FOOTER													FOOTER
 }
 .footer a, .footer p {
   font-size: 1.5vw;
-  color: rgb(70, 70, 70);
+  color: rgb(0, 0, 0);
   text-align: start;
 }
 .footer a {
   color: rgb(43, 43, 255); /*color azul a los hipervinculos*/
 }
-.footer .jim {
-  border-left: 0px;
+.footer img {
+  margin-top: 2vw;
 }
-.footer .jim .imgFooter { /*foto de lombriz*/
+.footer .textoGris {
+  font-size: 1.5vw;
+  color: rgb(108, 108, 108);
+  align-self: center;
+  text-align: center;
+  width: auto;
+  margin: 0px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.135);
+}
+.footer .footer1 {
+  border-left: 0px;
+  margin-top: 0px;
+}
+.footer .footer1 .imgFooter { /*foto de lombriz*/
   border-radius: 50%;
   height: 10vw;
   width: 10vw;
-  margin: 10%;
-  margin-top: 0px;
+  margin: 2vw 10% 10% 10%;
+  align-self: center;
   border: 2px outset #db01fe;
 }
-.footer .jim p { /*nombre de la lombriz	"Earthworm Jim	*/
+.footer .footer1 p { /*nombre de la lombriz	"Earthworm Jim	*/
   background-color: rgb(146, 146, 146);
   border-radius: 3px;
-  margin-left: 20%;
-  margin-bottom: 30px;
   align-self: center;
   text-align: center;
-  width: 10vw;
+  width: 11vw;
 }
-.footer .jim .basicamente {
+.footer .footer1 .basicamente {
   width: 15vw;
   border-radius: 10px;
+  border: 2px outset #db01fe;
+  margin-top: 4vw;
 }
-.footer .footerImg2 { /*foto a la derecha*/
-  height: 15vw;
-  border-radius: 10px;
-}
-.footer .igText {
-  font-size: 1vw;
-  color: rgb(126, 126, 126);
+.footer .footer2 .amongtagram {
   align-self: center;
-  text-align: center;
-  width: 4vw;
 }
-.footer .yo {
+.footer .footer2 .amongtagram img {
+  width: 5vw;
+}
+.footer .footer2 .yo {
   width: 5vw;
   align-self: center;
   border-radius: 100%;
 }
+.footer .footer3 .footerImg2 { /*foto a la derecha*/
+  height: 15vw;
+  border-radius: 10px;
+}
+.footer .footer3 .textoGris {
+  font-size: 1.5vw;
+  align-self: self-start;
+}
 
 @media (max-width: 768px) {
-  .footer {
-    border-radius: 20px 20px 0px 0px;
-  }
-  .footer article {
-    border-left: 2px solid rgb(100, 100, 100);
-    border-radius: 15px;
-  }
   .redesP {
     font-size: 37px;
     border-radius: 5px;
@@ -351,14 +368,56 @@ FOOTER													FOOTER
   .imgRedes {
     border-radius: 15px;
   }
-}
-@media (max-width: 480px) {
   .footer {
     border-radius: 20px 20px 0px 0px;
+    border-top: 1px solid black;
   }
   .footer article {
     border-left: 1px solid rgb(100, 100, 100);
+    border-radius: 10px;
   }
+  .footer a, .footer p {
+    font-size: 3.2vw;
+  }
+  .footer .textoGris {
+    font-size: 2.5vw;
+    width: 20vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.135);
+  }
+  .footer .footer1 .imgFooter { /*foto de lombriz*/
+    height: 14vw;
+    width: 14vw;
+    border: 1px outset #db01fe;
+  }
+  .footer .footer1 p { /*nombre de la lombriz	"Earthworm Jim	*/
+    border-radius: 2px;
+    width: 17.5vw;
+  }
+  .footer .footer1 .basicamente {
+    width: 20vw;
+    border-radius: 7px;
+    border: 1px outset #db01fe;
+  }
+  .footer .footer2 .amongtagram img {
+    width: 8vw;
+  }
+  .footer .footer2 .yo {
+    width: 5vw;
+    align-self: center;
+    border-radius: 100%;
+  }
+  .footer .footer3 .footerImg2 { /*foto a la derecha*/
+    width: 40vw;
+    height: auto;
+    border-radius: 7px;
+  }
+  .footer .footer3 .textoGris {
+    font-size: 2vw;
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
   .galeriaMain .galeriaImg {
     width: 72vw;
     margin: 2vw;
@@ -376,17 +435,70 @@ FOOTER													FOOTER
     border-radius: 10px;
     border: 2px outset #db01fe;
   }
+  .tiendaMain {
+    padding-top: 6vw;
+    grid-template-columns: 40vw;
+    grid-template-rows: auto, auto, auto, auto;
+  }
+  .tiendaMain .tiendaFoto img {
+    width: 70vw;
+    max-width: 40vh;
+    height: 60vh;
+    max-height: 110vw;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .tiendaMain .tiendaFoto .nombresTienda {
+    width: 70vw;
+    max-width: 40vh;
+    font-size: 6vw;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .tiendaMain .tienda1 {
+    grid-column: 1;
+  }
+  .tiendaMain .tienda2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .tiendaMain .tienda3 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .tiendaMain .tienda4 {
+    height: 60vh;
+    max-height: 110vw;
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .tiendaMain .tienda4 img {
+    height: 60vh;
+    max-height: 110vw;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+  .tiendaMain .tienda4 .nombresTienda {
+    bottom: min(50vw, 33vh);
+    position: relative;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    background-color: rgba(14, 14, 14, 0.7);
+    border: 2px solid black;
+  }
 }
 @media (max-width: 320px) {
   .footer {
     border-radius: 15px 15px 0px 0px;
   }
-  .footer .jim .imgFooter {
-    border: 1px outset #db01fe;
-  }
   .footer article {
     border-left: 1px solid rgb(100, 100, 100);
     border-radius: 10px;
+  }
+  .footer a, .footer p {
+    font-size: 3vw;
+    text-align: start;
+  }
+  .footer .footer1 .imgFooter {
+    border: 1px outset #db01fe;
   }
   .redesP {
     font-size: 20px;

@@ -25,7 +25,7 @@ a:link, a:visited, a:active, a:hover {
 
 
 a {
-	color: white;/*				la unica forma que encontre de darle color a los hipervinculos*/
+	color: white;/*		la unica forma que encontre de darle color a los hipervinculos*/
 	font-style: none;
 }
 
@@ -37,7 +37,8 @@ nav {
 	z-index: 2;//			porque algunos elementos lo superponían
 
 	.navBotones, .navBotTienda{
-		background: linear-gradient(rgba(221, 0, 255, 0.705) 10%, transparent);// 10% para que destaque más el color
+		background: linear-gradient(rgba(221, 0, 255, 0.705) 80%, transparent);// 10% para que destaque más el color
+		height: 5vw;
 	}
 
 	img {/*Banner*/
@@ -66,7 +67,7 @@ nav {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		height: 2.5vw;/*			en vw para hacerlo un poco más responsive*/
+		height: 3vw;/*			en vw para hacerlo un poco más responsive*/
 	}
 
 	.navTxt, .navTienda{/*clase aparte para el texto y poder darle el borde*/
@@ -83,6 +84,8 @@ nav {
 		width: 25vw;
 		text-align: center;
 		border-left: 2px solid #d903fa;
+		border-right: 2px solid #d903fa;
+		border-radius: 5px;
 	}
 
 	.navTienda {//segunda botonera del nav en la tienda
@@ -165,13 +168,18 @@ footer {
 *************************************************************************************************
 <MAIN> TIENDA											TIENDA
 */
+nav{//		por alguna razon si no lo pongo dentro del nav no funciona -.-
+	.navTiendaSuperior{//		los botones superiores del nav
+		background: (rgba(221, 0, 255, 0.705));
+	}
+}
+
 .tiendaMain {
-	padding-top: 2vw;//		para que quede mas abajo por el nuevo nav
+	padding-top: 4vw;//		para que quede mas abajo por el nuevo nav
 	display: grid;
 	grid-template-columns: 40vw 40vw;
 	grid-template-rows: auto, auto;
 	justify-content: center;
-	row-gap: 10vw;
 
 	.tiendaFoto {
 		justify-self: center;
@@ -198,26 +206,24 @@ footer {
 	}
 
 	.tienda4{
-		grid-column: 2;
-		grid-row: 2;
-		z-index: 0;
 		img{
-			height: 44.7vw;// 		para que tenga la misma altura que el del lado junto con el texto
+			height: 44.5vw;// 		para que tenga la misma altura que el del lado junto con el texto
 			object-fit: cover;
 			filter: grayscale(100%) brightness(50%);//		si le doy blur(Xpx) se pone borroso el borde >:c
-			position: absolute;
-			right: 16.75vw;//		culpa del position: absolute; no se centra solo
 			border-radius: 10px;
 			border: 3px solid black;
+			grid-column: 2;
+			grid-row: 2;
 		}
 		.nombresTienda{
-			width: 30vw;
-			position: relative;
+			bottom: 23vw;
 			transform: rotate(45deg);
-			top: 22vw;//			para dejarlo más al medio
+			position: relative;
 			border-radius: 20px;
 			background-color: rgba(14, 14, 14, 0.7);
 			border: 3px solid black;
+			grid-column: 2;
+			grid-row: 2;
 		}
 	}
 } 
@@ -244,6 +250,9 @@ footer {
 		border-radius: 20px;
 		border: 3px outset #db01fe;
 	}
+}
+.carousel{
+	margin-bottom: 10vw;
 }
 
 /*
@@ -292,8 +301,9 @@ FOOTER													FOOTER
 	display: flex;
 	justify-content: space-between;
 	border-radius: 30px 30px 0px 0px;
-	margin-top: 10vw;
-
+	margin-top: 5vw;
+	border-top: 2px solid black;
+	/////////
 	article {/*para ordenar en filas el contenido de los articulos*/
 		display: flex;
 		flex-direction: column;
@@ -301,69 +311,87 @@ FOOTER													FOOTER
 		border-left: 2px solid rgb(100, 100, 100);//		linea curva gris...
 		border-radius: 20px;
 		padding: 1%;//															...//
-	}
-
+	}/////////
 	a, p {
 		font-size: 1.5vw;
-		color: rgb(70, 70, 70);
+		color: rgb(0, 0, 0);
 		text-align: start;
-	}
-	
+	}/////////
 	a {
 		color: rgb(43, 43, 255); /*color azul a los hipervinculos*/
+	}/////////
+	img{
+		margin-top: 2vw;
+	}/////////
+	.textoGris{
+		font-size: 1.5vw; 
+		color: rgb(108, 108, 108);
+		align-self: center;
+		text-align: center;
+		width: auto;
+		margin: 0px;
+		border-radius: 10px;
+		background-color: rgba(255, 255, 255, 0.135);
 	}
-
-	.jim {
+	/////////
+	.footer1 {
 
 		border-left: 0px;//			para cancelar la linea curva a la izquierda
+		margin-top: 0px;//			para cancelar el margin de arriba (lo pongo ariba a todas las img)
 
 		.imgFooter { /*foto de lombriz*/
 			border-radius: 50%;
 			height: 10vw; width: 10vw;
-			margin: 10%;
-			margin-top: 0px;
+			margin: 2vw 10% 10% 10%;
+			align-self: center;
 			border: 2px outset #db01fe;
 		}
 		
 		p { /*nombre de la lombriz	"Earthworm Jim	*/
 			background-color: rgb(146, 146, 146);
 			border-radius: 3px;
-			margin-left: 20%;
-			margin-bottom: 30px;
 			align-self: center;
 			text-align: center;
-			width: 10vw;
+			width: 11vw;
 		}
 
-		.basicamente{
+		.basicamente{//			basicamente
 			width: 15vw;
 			border-radius: 10px;
+			border: 2px outset #db01fe;
+			margin-top: 4vw;
 		}
 	}
+	/////////
+	.footer2{
+		.amongtagram{
+			align-self: center;
 
-	.footerImg2 { /*foto a la derecha*/
-		height: 15vw;
-		border-radius: 10px;
+			img{
+			width: 5vw;
+			}
+		}
+		.yo{//		foto mia
+			width: 5vw;
+			align-self: center;
+			border-radius: 100%;
+		}
 	}
-
-	.igText{//	texto del instagram
-		font-size: 1vw; 
-		color: rgb(126, 126, 126);
-		align-self: center; 
-		text-align: center;
-		width: 4vw; 
+	/////////
+	.footer3{
+		.footerImg2 { /*foto a la derecha*/
+			height: 15vw;
+			border-radius: 10px;
+		}
+		.textoGris{//		texto en la esquina derecha
+			font-size: 1.5vw;
+			align-self: self-start; 
+		}
 	}
-	.yo{
-		width: 5vw;
-		align-self: center;
-		border-radius: 100%;
-	}
-
 }
 
 
-
-
+//FOOTER													FOOTER
 //##########################################################################//
 //##########################################################################//
 //								RESPONSIVE									//
@@ -371,13 +399,6 @@ FOOTER													FOOTER
 //##########################################################################//
 
 @media (max-width: 768px){
-	.footer{
-		border-radius: 20px 20px 0px 0px;
-		article{
-			border-left: 2px solid rgb(100, 100, 100);//linea redondeada gris
-			border-radius: 15px; 
-		}
-	}
 	.redesP {
 		font-size: 37px;
 		border-radius: 5px;
@@ -392,23 +413,75 @@ FOOTER													FOOTER
 	.imgRedes {
 		border-radius: 15px;
 	}
+	.footer {/////////////////////////////////////////////////////////////// 	FOOTER
+		border-radius: 20px 20px 0px 0px;
+		border-top: 1px solid black;
+		/////////
+		article {
+			border-left: 1px solid rgb(100, 100, 100);//linea redondeada gris
+			border-radius: 10px;
+		}
+		a, p {
+			font-size: 3.2vw;
+		}
+		/////////
+		.textoGris{
+			font-size: 2.5vw;
+			width: 20vw;
+			border-radius: 10px;
+			background-color: rgba(255, 255, 255, 0.135);
+		}
+		.footer1{
+			.imgFooter { /*foto de lombriz*/
+				height: 14vw; width: 14vw;
+				border: 1px outset #db01fe;
+			}
+			
+			p { /*nombre de la lombriz	"Earthworm Jim	*/
+				border-radius: 2px;
+				width: 17.5vw;
+			}
+	
+			.basicamente{//			basicamente
+				width: 20vw;
+				border-radius: 7px;
+				border: 1px outset #db01fe;
+			}
+		}
+		/////////
+		.footer2{
+			.amongtagram{	img{	width: 8vw;}}
+			.yo{//		foto mia
+				width: 5vw;
+				align-self: center;
+				border-radius: 100%;
+			}
+		}
+		/////////
+		.footer3{
+			.footerImg2 { /*foto a la derecha*/
+				width: 40vw;		height: auto;
+				border-radius: 7px;
+			}
+			.textoGris{//		texto en la esquina derecha
+				font-size: 2vw;
+				width: auto;
+			}
+		}
+	
+	}
 }
 
+//*************************************************************************************************
 
 @media (max-width: 480px){
-	.footer{
-		border-radius: 20px 20px 0px 0px;
-		article{
-			border-left: 1px solid rgb(100, 100, 100);//linea redondeada gris
-		}
-	}
-	.galeriaMain{
+	.galeriaMain{/////////////////////////////////////////////////////////////// 	GALERIA
 		.galeriaImg{
 			width: 72vw; 
 			margin: 2vw; 
 		}
 	}
-	.redesP {
+	.redesP {//////////////////////////////////////////////////////////////////		REDES
 		font-size: 30px;
 		border-radius: 4px;
 	}
@@ -421,21 +494,72 @@ FOOTER													FOOTER
 		border-radius: 10px;
 		border: 2px outset #db01fe;
 	}
-
-} 
-
+	.tiendaMain {/////////////////////////////////////////////////////////////// TIENDA
+		padding-top: 6vw;
+		grid-template-columns: 40vw;
+		grid-template-rows: auto, auto, auto, auto;
+	
+		.tiendaFoto {
+			img{
+				width: 70vw;	max-width: 40vh;		height: 60vh;  max-height: 110vw;//		medidas máximas para que no queden medio deformes en ciertas pantallas
+				border-radius: 10px 10px 0px 0px;
+			}
+			.nombresTienda {
+				width: 70vw;	max-width: 40vh;
+				font-size: 6vw;
+				border-radius: 0px 0px 10px 10px;
+			}
+		}
+		.tienda1{
+			grid-column: 1;
+		}
+		.tienda2{
+			grid-column: 1;
+			grid-row: 2; 
+		}
+		.tienda3{
+			grid-column: 1;
+			grid-row: 3; 
+		}
+	
+		.tienda4{
+			height: 60vh;  max-height: 110vw;//		sin esto se superpone al footer
+			grid-column: 1;
+			grid-row: 4;
+			img{
+				height: 60vh;  max-height: 110vw;
+				border-radius: 10px;
+				border: 2px solid black;
+			}
+			.nombresTienda{
+				bottom: min(50vw, 33vh);//		para pantallas de resolucion rara (porque puedo)
+				position: relative;
+				transform: rotate(45deg);
+				border-radius: 10px;
+				background-color: rgba(14, 14, 14, 0.7);
+				border: 2px solid black;
+			}
+		}
+	}
+}
+//*************************************************************************************************
 
 @media (max-width: 320px){
 	.footer{
 		border-radius: 15px 15px 0px 0px; 
-		.jim{
+		article{
+			border-left: 1px solid rgb(100, 100, 100);//linea redondeada gris
+			border-radius: 10px;
+		}
+		a, p {
+			font-size: 3vw;
+			text-align: start;
+		}
+
+		.footer1{
 			.imgFooter{
 			border: 1px outset #db01fe;// circulo violeta de borde de la foto
 			}
-		}
-		article{
-			border-left: 1px solid rgb(100, 100, 100);//linea redondeada gris
-			border-radius: 10px; 
 		}
 	}
 		
