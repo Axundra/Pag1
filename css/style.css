@@ -353,6 +353,7 @@ FOOTER													FOOTER
 .footer .footer3 .textoGris {
   font-size: 1.5vw;
   align-self: self-start;
+  width: auto;
 }
 
 @media (max-width: 768px) {
@@ -403,9 +404,7 @@ FOOTER													FOOTER
     width: 8vw;
   }
   .footer .footer2 .yo {
-    width: 5vw;
-    align-self: center;
-    border-radius: 100%;
+    width: 10vw;
   }
   .footer .footer3 .footerImg2 { /*foto a la derecha*/
     width: 40vw;
@@ -414,7 +413,6 @@ FOOTER													FOOTER
   }
   .footer .footer3 .textoGris {
     font-size: 2vw;
-    width: auto;
   }
 }
 @media (max-width: 480px) {
@@ -486,20 +484,6 @@ FOOTER													FOOTER
   }
 }
 @media (max-width: 320px) {
-  .footer {
-    border-radius: 15px 15px 0px 0px;
-  }
-  .footer article {
-    border-left: 1px solid rgb(100, 100, 100);
-    border-radius: 10px;
-  }
-  .footer a, .footer p {
-    font-size: 3vw;
-    text-align: start;
-  }
-  .footer .footer1 .imgFooter {
-    border: 1px outset #db01fe;
-  }
   .redesP {
     font-size: 20px;
     border-radius: 3px;
@@ -511,6 +495,37 @@ FOOTER													FOOTER
   }
   .imgRedes {
     border: 1px outset #db01fe;
+  }
+  .footer {
+    border-radius: 10px 10px 0px 0px;
+  }
+  .footer article {
+    border-left: 1px solid rgb(100, 100, 100);
+    border-radius: 6px;
+  }
+  .footer a, .footer p {
+    font-size: 3vw;
+    text-align: start;
+  }
+  .footer .textoGris {
+    font-size: 3.3vw;
+  }
+  .footer .footer1 .imgFooter {
+    border: 1px outset #db01fe;
+  }
+  .footer .footer1 .basicamente {
+    width: 25vw;
+    border-radius: 7px;
+    border: 1px outset #db01fe;
+  }
+  .footer .footer2 .amongtagram img {
+    width: 10vw;
+  }
+  .footer .footer2 .yo {
+    width: 15vw;
+  }
+  .footer .footer3 .textoGris {
+    font-size: 3vw;
   }
 }
 

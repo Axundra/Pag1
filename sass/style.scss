@@ -385,7 +385,8 @@ FOOTER													FOOTER
 		}
 		.textoGris{//		texto en la esquina derecha
 			font-size: 1.5vw;
-			align-self: self-start; 
+			align-self: self-start;
+			width: auto;
 		}
 	}
 }
@@ -451,11 +452,7 @@ FOOTER													FOOTER
 		/////////
 		.footer2{
 			.amongtagram{	img{	width: 8vw;}}
-			.yo{//		foto mia
-				width: 5vw;
-				align-self: center;
-				border-radius: 100%;
-			}
+			.yo{width: 10vw;}
 		}
 		/////////
 		.footer3{
@@ -465,10 +462,8 @@ FOOTER													FOOTER
 			}
 			.textoGris{//		texto en la esquina derecha
 				font-size: 2vw;
-				width: auto;
 			}
 		}
-	
 	}
 }
 
@@ -545,37 +540,52 @@ FOOTER													FOOTER
 //*************************************************************************************************
 
 @media (max-width: 320px){
+	.redesP {
+		font-size: 20px;
+		border-radius: 3px;
+	}
+	.ico {
+		padding: 3px;
+		width: 70px;
+		border-radius: 5px;
+	}
+	.imgRedes {
+		border: 1px outset #db01fe;
+	}
+
 	.footer{
-		border-radius: 15px 15px 0px 0px; 
+		border-radius: 10px 10px 0px 0px; 
 		article{
 			border-left: 1px solid rgb(100, 100, 100);//linea redondeada gris
-			border-radius: 10px;
+			border-radius: 6px;
 		}
 		a, p {
 			font-size: 3vw;
 			text-align: start;
+		}
+		.textoGris{
+			font-size: 3.3vw;
 		}
 
 		.footer1{
 			.imgFooter{
 			border: 1px outset #db01fe;// circulo violeta de borde de la foto
 			}
+			.basicamente{//			basicamente
+				width: 25vw;
+				border-radius: 7px;
+				border: 1px outset #db01fe;
+			}
+		}
+		/////////
+		.footer2{
+			.amongtagram{	img{	width: 10vw;}}
+			.yo{width: 15vw;}
+		}
+		.footer3{
+			.textoGris{
+				font-size: 3vw;
+			}
 		}
 	}
-		
-	.redesP {
-		font-size: 20px;
-		border-radius: 3px;
-	}
-
-	.ico {
-		padding: 3px;
-		width: 70px;
-		border-radius: 5px;
-	}
-
-	.imgRedes {
-		border: 1px outset #db01fe;
-	}
-
 }
