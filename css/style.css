@@ -37,10 +37,12 @@ nav .navBotones, nav .navBotTienda {
 }
 nav img { /*Banner*/
   width: 100vw;
-  height: 7.5vw;
-  max-height: 210px; /*			max-height y heigt:30vw; para hacerlo responsive*/
+  height: 10vw;
+  max-height: 130px; /*			max-height y heigt:30vw; para hacerlo responsive*/
   object-fit: cover; /*			para ajustar la imagen*/
   position: relative;
+  top: 0px;
+  vertical-align: unset;
 }
 nav .titulo { /*Título del banner*/
   padding: 3.5px; /*				padding porque si no me corta el borde-gradiente de las letras como la g,y,t*/
@@ -62,10 +64,18 @@ nav .navBotones {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 3vw; /*			en vw para hacerlo un poco más responsive*/
+  height: auto;
+}
+nav .navBotones article {
+  display: flex;
+  align-items: end;
+  height: 4vw;
+  margin-top: auto;
 }
 nav .navTxt, nav .navTienda { /*clase aparte para el texto y poder darle el borde*/
-  padding: 0px 1%; /*			para que no se corte el borde/gradiente*/
+  z-index: 4;
+  padding: 2% 1%; /*			para que no se corte el borde/gradiente*/
+  margin: 1.5% 0px;
   letter-spacing: 1.2vw;
   font-size: 1.7vw;
   font-family: sans-serif;
@@ -77,9 +87,10 @@ nav .navTxt, nav .navTienda { /*clase aparte para el texto y poder darle el bord
   -webkit-text-stroke: 0.5vw transparent;
   width: 25vw;
   text-align: center;
+  border-top: 2px solid rgba(185, 39, 180, 0.7058823529);
   border-left: 2px solid #d903fa;
   border-right: 2px solid #d903fa;
-  border-radius: 5px;
+  border-radius: 20px 20px 0px 0px;
 }
 nav .navTienda {
   width: 33.33vw;
@@ -114,7 +125,7 @@ body {
 
 main {
   min-height: 100vh;
-  padding-top: 13vw; /*padding a todos los main para que queden debajo del nav*/
+  padding-top: 15vw; /*padding a todos los main para que queden debajo del nav*/
 }
 
 footer {
@@ -484,6 +495,16 @@ FOOTER													FOOTER
   }
 }
 @media (max-width: 320px) {
+  .parrafo {
+    font-size: 5vw;
+  }
+  p, a {
+    font-size-adjust: 0.6;
+  }
+  nav .navTxt {
+    border-left: 1px solid #d903fa;
+    border-right: 1px solid #d903fa;
+  }
   .redesP {
     font-size: 20px;
     border-radius: 3px;

@@ -42,9 +42,11 @@ nav {
 	}
 
 	img {/*Banner*/
-		width: 100vw;		height: 7.5vw;		max-height: 210px;/*			max-height y heigt:30vw; para hacerlo responsive*/
+		width: 100vw;		height: 10vw;		max-height: 130px;/*			max-height y heigt:30vw; para hacerlo responsive*/
 		object-fit: cover;/*			para ajustar la imagen*/
 		position: relative;
+		top: 0px;
+		vertical-align: unset;
 	}
 
 	.titulo {/*Título del banner*/
@@ -63,15 +65,23 @@ nav {
 		-webkit-text-stroke: .5vw transparent;/*				...hasta acá*/
 	}
 
-	.navBotones{//		pendiente para solucionar el responsivo********************************************
+	.navBotones{
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		height: 3vw;/*			en vw para hacerlo un poco más responsive*/
+		height: auto;
+		article{
+			display: flex;
+			align-items: end;
+			height: 4vw;
+			margin-top: auto;
+		}
 	}
 
 	.navTxt, .navTienda{/*clase aparte para el texto y poder darle el borde*/
-		padding: 0px 1%;/*			para que no se corte el borde/gradiente*/
+		z-index: 4;
+		padding: 2% 1%;/*			para que no se corte el borde/gradiente*/
+		margin: 1.5% 0px;
 		letter-spacing: 1.2vw;
 		font-size: 1.7vw;
 		font-family: sans-serif;
@@ -83,9 +93,10 @@ nav {
 		-webkit-text-stroke: .5vw transparent;
 		width: 25vw;
 		text-align: center;
+		border-top: 2px solid #b927b4b4;
 		border-left: 2px solid #d903fa;
 		border-right: 2px solid #d903fa;
-		border-radius: 5px;
+		border-radius: 20px 20px 0px 0px;
 	}
 
 	.navTienda {//segunda botonera del nav en la tienda
@@ -126,7 +137,7 @@ body {
 
 main {
 	min-height: 100vh;
-	padding-top: 13vw;/*padding a todos los main para que queden debajo del nav*/
+	padding-top: 15vw;/*padding a todos los main para que queden debajo del nav*/
 }
 
 footer {
@@ -540,6 +551,19 @@ FOOTER													FOOTER
 //*************************************************************************************************
 
 @media (max-width: 320px){
+	.parrafo{
+		font-size: 5vw;
+	}
+	p, a{//			agranda todo el texto
+		font-size-adjust: .6;
+	}
+
+	nav{
+		.navTxt{
+			border-left: 1px solid #d903fa;
+			border-right: 1px solid #d903fa;
+		}
+	}
 	.redesP {
 		font-size: 20px;
 		border-radius: 3px;
