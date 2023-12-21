@@ -31,8 +31,11 @@ nav {
   position: fixed;
   z-index: 2;
 }
+nav .banner {
+  display: flex;
+}
 nav .navBotones, nav .navBotTienda {
-  background: linear-gradient(rgba(221, 0, 255, 0.705) 80%, transparent);
+  background: rgba(221, 0, 255, 0.446);
   height: 5vw;
 }
 nav img { /*Banner*/
@@ -61,6 +64,7 @@ nav .titulo { /*Título del banner*/
   -webkit-text-stroke: 0.5vw transparent; /*				...hasta acá*/
 }
 nav .navBotones {
+  backdrop-filter: blur(50px);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -71,6 +75,12 @@ nav .navBotones article {
   align-items: end;
   height: 4vw;
   margin-top: auto;
+}
+nav .navBotones .navBoton1 {
+  border-left: 0px;
+}
+nav .navBotones .navBoton4 {
+  border-right: 0px;
 }
 nav .navTxt, nav .navTienda { /*clase aparte para el texto y poder darle el borde*/
   z-index: 4;
