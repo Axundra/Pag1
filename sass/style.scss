@@ -8,7 +8,7 @@
 
 a:link, a:visited, a:active, a:hover {
     text-decoration: none;
-	transition: 1s;
+	transition: all .5s ease-out;
 }
 
 
@@ -32,17 +32,23 @@ a {
 /*************************************************************************************************
 HEADER
 */
-nav {
+nav{
 	position: fixed;
 	z-index: 2;//			porque algunos elementos lo superponían
 
-	.banner
-	{
+	.banner{
 		display: flex;
 	}
 	.navBotones, .navBotTienda{
 		background:rgba(221, 0, 255, 0.446);// 10% para que destaque más el color
 		height: 5vw;
+	}
+	.navBotTienda{
+		height: 2.5vw;
+
+		article{
+			max-height: 2.5vw;
+		}
 	}
 
 	img {/*Banner*/
@@ -50,7 +56,6 @@ nav {
 		object-fit: cover;/*			para ajustar la imagen*/
 		position: relative;
 		top: 0px;
-		vertical-align: unset;
 	}
 
 	.titulo {/*Título del banner*/
@@ -69,24 +74,29 @@ nav {
 		-webkit-text-stroke: .5vw transparent;/*				...hasta acá*/
 	}
 
-	.navBotones{
-		backdrop-filter: blur(50px);
+	.navBotones, .navBotTienda{
+		backdrop-filter: blur(10px);
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
-		height: auto;
+		height: 3.7vw;
 		article{
 			display: flex;
-			align-items: end;
+			align-items: end;//			para que queden centrados
 			height: 4vw;
 			margin-top: auto;
 		}
-		.navBoton1{
+		.navBoton1{//		para sacar el borde izquierdo del primer boton
 			border-left: 0px;
+			border-start-start-radius: 0px;
 		}
-		.navBoton4{
+		.navBoton4{//		para sacar el borde derecho del último boton
 			border-right: 0px;
+			border-start-end-radius: 0px;
 		}
+	}
+
+	.navBotTienda{
+		height: 3.1vw;
 	}
 
 	.navTxt, .navTienda{/*clase aparte para el texto y poder darle el borde*/
@@ -118,16 +128,18 @@ nav {
 	}
 
 	a:hover{
+		transition: 1s;
 		color: #8c07a1;
 		background: linear-gradient(#eeb0f8, #d903fa); 
 		background-clip: text;
 		-webkit-background-clip: text; 
 		-webkit-text-stroke: .5vw transparent;
-		font-size: 2vw;
+		font-size: 3vw;
 	}
 
 	.titulo:hover{
-		font-size: 4.8vw;
+		transition: 1s;
+		font-size: 6vw;
 	}
 }
 
@@ -190,11 +202,6 @@ footer {
 *************************************************************************************************
 <MAIN> TIENDA											TIENDA
 */
-nav{//		por alguna razon si no lo pongo dentro del nav no funciona -.-
-	.navTiendaSuperior{//		los botones superiores del nav
-		background: (rgba(221, 0, 255, 0.705));
-	}
-}
 
 .tiendaMain {
 	padding-top: 4vw;//		para que quede mas abajo por el nuevo nav
@@ -319,12 +326,13 @@ FOOTER													FOOTER
 */
 
 .footer {
-	background-color: darkgrey;
+	background-color: rgba(171, 171, 171, 0.829);
 	display: flex;
 	justify-content: space-between;
 	border-radius: 30px 30px 0px 0px;
 	margin-top: 5vw;
 	border-top: 2px solid black;
+	backdrop-filter: blur(5px);
 	/////////
 	article {/*para ordenar en filas el contenido de los articulos*/
 		display: flex;
@@ -397,7 +405,7 @@ FOOTER													FOOTER
 			width: 5vw;
 			align-self: center;
 			border-radius: 100%;
-		}
+			border: 3px outset black;}
 	}
 	/////////
 	.footer3{
@@ -442,7 +450,7 @@ FOOTER													FOOTER
 		/////////
 		article {
 			border-left: 1px solid rgb(100, 100, 100);//linea redondeada gris
-			border-radius: 10px;
+			border-radius: 2px 10px;
 		}
 		a, p {
 			font-size: 3.2vw;
@@ -511,6 +519,40 @@ FOOTER													FOOTER
 		border-radius: 10px;
 		border: 2px outset #db01fe;
 	}
+
+	nav{///////////////////////////////////////////////////////////////
+		
+		img {/*Banner*/
+			width: 100vw;		height: 15vw;
+		}
+
+		.titulo {
+			font-size: 7vw;
+			top: 7px;
+		}
+		.titulo:hover{
+			font-size: 8vw;
+		}
+		
+		.navBotones{
+			transform: scaleY(2);
+			margin-top: 2.6vw;
+			height: 5.3vw;
+		}
+
+		.navBotTienda{
+			transform: scaleY(2);
+			margin-top: 4.5vw;
+			height: 4.4vw;
+		}
+
+		.navTxt, .navTienda{
+			border-top: 1px solid #b927b4b4; 	border-left: 1px solid #d903fa;	border-right: 1px solid #d903fa;
+			border-radius: 5px 5px 0px 0px;
+			font-size: 2.5vw;
+		}
+	}
+
 	.tiendaMain {/////////////////////////////////////////////////////////////// TIENDA
 		padding-top: 6vw;
 		grid-template-columns: 40vw;
@@ -570,9 +612,12 @@ FOOTER													FOOTER
 	}
 
 	nav{
-		.navTxt{
-			border-left: 1px solid #d903fa;
-			border-right: 1px solid #d903fa;
+		a:hover{
+			font-size: 2.5vw;
+		}
+		.titulo, .titulo:hover{
+			font-size: 4.5vw;
+			top: 10px;
 		}
 	}
 	.redesP {
@@ -588,39 +633,46 @@ FOOTER													FOOTER
 		border: 1px outset #db01fe;
 	}
 
+	.tiendaMain{
+		padding-top: 30vw;
+	}
+
 	.footer{
 		border-radius: 10px 10px 0px 0px; 
 		article{
 			border-left: 1px solid rgb(100, 100, 100);//linea redondeada gris
-			border-radius: 6px;
+			border-radius: 2px 6px;
 		}
 		a, p {
-			font-size: 3vw;
+			font-size: 2.5vw;
 			text-align: start;
+			margin-bottom: 4px;
 		}
 		.textoGris{
-			font-size: 3.3vw;
+			font-size: 2.5vw;
 		}
-
+		/////////
 		.footer1{
-			.imgFooter{
-			border: 1px outset #db01fe;// circulo violeta de borde de la foto
+			.imgFooter{ border: 1px outset #db01fe;
 			}
-			.basicamente{//			basicamente
-				width: 25vw;
+			.basicamente{
+				width: 20vw;
 				border-radius: 7px;
 				border: 1px outset #db01fe;
 			}
 		}
 		/////////
 		.footer2{
-			.amongtagram{	img{	width: 10vw;}}
-			.yo{width: 15vw;}
-		}
-		.footer3{
-			.textoGris{
-				font-size: 3vw;
+			.amongtagram{ 	img{ 	width: 10vw;}
+				}
+			.yo{
+				width: 10vw; 
+				border: 1px outset black;
 			}
+		}
+		/////////
+		.footer3{
+
 		}
 	}
 }
