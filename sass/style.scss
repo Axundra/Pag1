@@ -279,6 +279,9 @@ footer {
 		border-radius: 20px;
 		border: 3px outset #db01fe;
 	}
+	.imgGaleria{
+		max-height: 50vw;
+	}
 }
 .carousel{
 	margin-bottom: 10vw;
@@ -339,7 +342,7 @@ FOOTER													FOOTER
 		flex-direction: column;
 		margin-top: 2vw;
 		border-left: 2px solid rgb(100, 100, 100);//		linea curva gris...
-		border-radius: 20px;
+		border-radius: 7px 15px;
 		padding: 1%;//															...//
 	}/////////
 	a, p {
