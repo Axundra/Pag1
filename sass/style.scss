@@ -170,8 +170,8 @@ footer {
 .parrafo {
 	font-size: 3.8vw;
 	padding: 1% 10%;
-	background-color: rgba(250, 250, 250, 0.3);
-	/*fondo transparente del texto*/ 
+	background-color: rgba(250, 250, 250, 0.173);	/*fondo transparente del texto*/
+	backdrop-filter: blur(15px); 
 }
 
 .boton {
